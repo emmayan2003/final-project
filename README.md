@@ -3,13 +3,21 @@ Emma Yan's final project assignment for MPCS 51046
 
 **Project idea #2:**
 I would like to create an enhanced restaurant table reservation system that includes a bidding functionality for fully booked restaurants. In addition to basic reservation management, users can bid for already-reserved tables. Customers who have booked tables can view bids and decide whether to swap their reservation for the highest bidder. The API will have methods to:
-Check table availability: Users can input the date, time, and party size to check for available tables. If no tables are available for the selected time, users will be given the option to place a bid for a reserved table.
-Make a reservation: Users can reserve a table for a specific date and time by providing their party size and contact details. If a table is available, they will receive a confirmation with their reservation details.
-Place a bid for a table: If all tables are fully booked, users can place a bid for a specific reserved table. They will input their bid amount and contact details, and this will be added to a list of bids associated with that table.
-View bids on reserved tables: Users with an active reservation can view bids placed on their table. Each bid will display the amount offered and the contact details of the bidder.
-Swap a reservation for a bid: Users with a reservation can choose to accept a bid and give up their table. The table will then be transferred to the bidder, and both users will receive confirmation of the swap.
-Cancel a reservation: Users can cancel their reservation by providing their reservation ID or contact details. If the reservation is canceled, any associated bids are removed, and the table becomes available for other customers.
-Generate a daily reservation and bidding report: Restaurant staff can generate a report showing all reservations for the day, along with any bids placed on tables, making it easier to manage both reservations and bidding activity.
+<br/>
+1. Check table availability: Users can input the date, time, and party size to check for available tables. If no tables are available for the selected time, users will be given the option to place a bid for a reserved table.
+<br/>
+2. Make a reservation: Users can reserve a table for a specific date and time by providing their party size and contact details. If a table is available, they will receive a confirmation with their reservation details.
+<br/>
+3. Place a bid for a table: If all tables are fully booked, users can place a bid for a specific reserved table. They will input their bid amount and contact details, and this will be added to a list of bids associated with that table.
+<br/>
+4. View bids on reserved tables: Users with an active reservation can view bids placed on their table. Each bid will display the amount offered and the contact details of the bidder.
+<br/>
+5. Swap a reservation for a bid: Users with a reservation can choose to accept a bid and give up their table. The table will then be transferred to the bidder, and both users will receive confirmation of the swap.
+<br/>
+6. Cancel a reservation: Users can cancel their reservation by providing their reservation ID or contact details. If the reservation is canceled, any associated bids are removed, and the table becomes available for other customers.
+<br/>
+7. Generate a daily reservation and bidding report: Restaurant staff can generate a report showing all reservations for the day, along with any bids placed on tables, making it easier to manage both reservations and bidding activity.
+<br/>
 Ideally, I would like the API to be able to handle multiple types of tables as well (e.g. bars, high-rise, regular dining room, etc.) and table of different sizes (i.e. each table should have a range of party size supported). The system should also be able to handle the situation where a party size is larger than the largest table available. Similar to proposal 1, I believe zmq or flask could be the library for implementing inter-user communications.
 
 
