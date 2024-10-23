@@ -13,7 +13,7 @@ Generate a daily reservation and bidding report: Restaurant staff can generate a
 Ideally, I would like the API to be able to handle multiple types of tables as well (e.g. bars, high-rise, regular dining room, etc.) and table of different sizes (i.e. each table should have a range of party size supported). The system should also be able to handle the situation where a party size is larger than the largest table available. Similar to proposal 1, I believe zmq or flask could be the library for implementing inter-user communications.
 
 
-**Execution Plan **
+**Execution Plan**
 1. Week 4: Do some research on the Flask library and probably try a couple of sample projects to know its basics.
 2. Week 5: Start implementing the server API that allows table availability queries and taking/modifying/canceling reservations and supports custom table sizes/number.
 3. Week 6: Finish implementing the server API with the functionality of making and taking bids.
