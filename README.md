@@ -10,8 +10,18 @@ Emma Yan's final project assignment for MPCS 51046
 ```bash
 pip install pyzmq
 ```
+## Run the Project with Docker
+1. Pull Docker server-image
+```bash
+docker pull emmayfh/server-image
+```
 
-## How to Clone and Run the Project
+3. Run Docker with IP Address and Port
+```bash
+docker run -p <IP_ADDRESS>
+```
+
+## How to Clone and Run the Project Without Docker
 
 1. Clone the Repository
 
@@ -20,7 +30,8 @@ git clone https://github.com/emmayan2003/final-project.git
 cd final-project
 ```
 
-2. Start the Server Run the server by specifying the IP address, port numbers, and table sizes:
+2. Start the Server
+Run the server by specifying the IP address, port numbers, and table sizes:
 ```bash
 python Server.py <IP_ADDRESS> <PORT> <PUB_PORT> <OWNER_PUB_PORT> <TABLE_SIZES>
 ```
@@ -62,7 +73,7 @@ Example:
 python Restaurant.py 127.0.0.1 5555 5557
 ```
 
-## Commands Overview
+## Commands or Actions Overview
 
 In Client.py
 - Make reservation: Create a new table reservation.
