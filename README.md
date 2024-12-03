@@ -31,7 +31,7 @@ Example:
 python Server.py 127.0.0.1 5555 5556 5557 2 4 6
 ```
 
- - `<IP_ADDRESS>`: Server IP address (e.g., 127.0.0.1 for localhost).
+ - `<IP_ADDRESS>`: Server IP address (e.g., 127.0.0.1 for localhost; Mac user can find IP Address in setting).
  - `<PORT>`: Port for client-server communication.
  - `<PUB_PORT>`: Port for customer notifications.
  - `<OWNER_PUB_PORT>`: Port for restaurant owner notifications.
