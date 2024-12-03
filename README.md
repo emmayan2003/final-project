@@ -87,7 +87,7 @@ I would like to create an enhanced restaurant table reservation system that incl
 4. View bids on reserved tables: Users with an active reservation can view bids placed on their table. Each bid will display the amount offered and the contact details of the bidder.
 5. Swap a reservation for a bid: Users with a reservation can choose to accept a bid and give up their table. The table will then be transferred to the bidder, and both users will receive confirmation of the swap.
 6. Cancel a reservation: Users can cancel their reservation by providing their reservation ID or contact details. If the reservation is canceled, any associated bids are removed, and the table becomes available for other customers.
-7. Generate a reservation summary: Restaurant staff can generate a report showing all reservations of the restaurant. They shouldn’t be able to see the bid however to make the bidding process remain anonymous
+7. Generate a reservation summary: Restaurant staff can generate a summary showing all reservations of the restaurant. They shouldn’t be able to see the bid however to make the bidding process remain anonymous to protect client privacy.
 
 Ideally, I would like the API to be able to handle table of different sizes (i.e. each table should have a range of party size supported). The system should also be able to handle the situation where a party size is larger than the largest table available. Similar to proposal 1, I believe zmq or flask could be the library for implementing inter-user communications.
 
