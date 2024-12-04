@@ -32,11 +32,17 @@ Example:
 python Server.py 127.0.0.1 5555 5556 5557 2 4 6
 ```
 
- - `<IP_ADDRESS>`: Server IP address (e.g., 127.0.0.1 for localhost; Mac user can find IP Address in setting).
+ - `<IP_ADDRESS>`: Server IP address (e.g., 127.0.0.1 for localhost).
  - `<PORT>`: Port for client-server communication.
  - `<PUB_PORT>`: Port for customer notifications.
  - `<OWNER_PUB_PORT>`: Port for restaurant owner notifications.
  - `<TABLE_SIZES>`: Space-separated sizes of tables in the restaurant.
+
+One can find the IPv4 address through command
+
+```bash
+ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
+```
 
 3. Start the Client Run the client to act as a customer. Provide the IP address, ports, and a unique user ID:
 ```bash
@@ -49,7 +55,7 @@ Example:
 python Client.py 127.0.0.1 5555 5556 user123
 ```
 
- - `<TABLE_SIZES>`: Arbitrary user_id.
+ - `<USER_ID>`: Arbitrary user_id.
 
 4. Start the Restaurant Owner Interface Run the restaurant owner script to monitor reservations. Provide the IP address, ports:
 
