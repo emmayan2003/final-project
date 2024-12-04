@@ -9,8 +9,6 @@ def display_bids():
     '''
     Prints out the bids made by the customer
     '''
-    #bids = [bid for bid in R.bids.values() if bid.user_id == user_id]
-    
     if len(bids) == 0:
         print("You haven't made any bids")
         return -1
