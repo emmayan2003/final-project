@@ -10,18 +10,8 @@ Emma Yan's final project assignment for MPCS 51046
 ```bash
 pip install pyzmq
 ```
-## Run the Project with Docker
-1. Pull Docker server-image
-```bash
-docker pull emmayfh/server-image
-```
 
-3. Run Docker with IP Address and Port
-```bash
-docker run -p <IP_ADDRESS>
-```
-
-## How to Clone and Run the Project Without Docker
+## How to Clone and Run the Project
 
 1. Clone the Repository
 
