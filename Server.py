@@ -3,7 +3,6 @@ import sys
 sys.path.insert(0, '..')
 from Utils import *
 
-
 ip = sys.argv[1]
 port = sys.argv[2]
 pub_port = sys.argv[3]
@@ -21,7 +20,6 @@ requests = []
 table_sizes_list = list(map(int, sys.argv[5:]))
 print(f"Table sizes: {table_sizes_list}")
 R = Restaurant(table_sizes_list)
-
 
 while True:
     request = s.recv_pyobj()

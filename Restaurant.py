@@ -38,7 +38,6 @@ def view_reservations():
             else:
                 for reservation in reservations:
                     print(reservation)
-        
         else:
             print('Invalid choice. Please try again.')
 

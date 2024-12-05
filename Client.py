@@ -34,7 +34,8 @@ def datetime_from_string(string):
     try:
         return datetime.strptime(string, '%m/%d/%Y %I:%M%p')
     except:
-        print('Wrong date and/or time format')
+        print('Wrong date and/or time format, please re-enter (M/D/YYYY Time)'
+              ' - Time should have format h:mmam/pm, e.g. 5:30pm')
         return -1
 
 def handle_reply(request, reply):
@@ -91,9 +92,10 @@ def send_request():
         
         if request.kind == "make reservation":
             print('Enter the date and time (M/D/YYYY Time):')
-            request.t0 = datetime_from_string(input())
-            if request.t0 == -1:
-                continue
+            tmp = -1
+            while tmp == -1:
+                tmp = datetime_from_string(input())
+            request.t0 = tmp
             print('Enter the number of people:')
             request.party_size = int(input())
         
@@ -107,15 +109,17 @@ def send_request():
             idx = int(input().replace('.', ''))
             request.booking_id = bookings[idx-1].id
             print('Enter the date and time that you want to change to (M/D/YYYY Time):')
-            request.t0 = datetime_from_string(input())
-            if request.t0 == -1:
-                continue
+            tmp = -1
+            while tmp == -1:
+                tmp = datetime_from_string(input())
+            request.t0 = tmp
         
         elif request.kind == "make bid":
             print('Enter the date and time:')
-            request.t0 = datetime_from_string(input())
-            if request.t0 == -1:
-                continue
+            tmp = -1
+            while tmp == -1:
+                tmp = datetime_from_string(input())
+            request.t0 = tmp
             print('Enter the number of people:')
             request.party_size = int(input())
             print('Enter how much you are willing to bid for ($):')
@@ -151,6 +155,7 @@ def send_request():
 
         else:
             print("Please type a valid request type.")
+            continue
 
         s.send_pyobj(request)
         reply = s.recv_pyobj()
